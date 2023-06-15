@@ -65,11 +65,24 @@ body{
     border-color: #0000;
 }
 
-@media screen and (min-width:768px) {
-.Calculo{
-    display:flex ;
-    width: 50%;
 
+@media screen and (max-width:768px) {
+.Calculo{
+    margin: 0;
+    display:flex ;
+    flex-direction: column;
+    width: 99%;
 }
+.Calculo__items{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.imagen{
+    width: 98%;
+}
+.body {
+    width: 98%;
     
+}
 }
