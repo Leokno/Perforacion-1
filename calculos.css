@@ -6,7 +6,7 @@ body{
 .Calculo{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 2.5rem;
     margin: 10%;
     background-color: #6fc7f7a6;
@@ -64,7 +64,9 @@ body{
     box-sizing: border-box;
     border-color: #0000;
 }
-
+.imagen{
+    width: 100%;
+}
 
 @media screen and (max-width:768px) {
 .Calculo{
