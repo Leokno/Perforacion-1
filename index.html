@@ -73,6 +73,9 @@
               onclick="CalcularPerdidaDePresion()" />
           </ul>
         </div>
+        <div>
+          <img class="imagen" src="/img/tuberia.png" alt="formula" />
+        </div>
       </section>
       <section class="Calculo">
         <div>
@@ -152,40 +155,45 @@
         </div>
       </section>
       <section class="Calculo">
-        <ul class="container">
-          <h1 class="Titulo">Calcular perdida de presion en la broca</h1>
-          <li class="Calculo__items">
-            Densidad (lb/gal)
-            <input
-              type="number"
-              id="Densidad3"
-              step="any"
-              min="0"
-              class="input" />
-          </li>
-          <li class="Calculo__items">
-            Tasa de penetracion (ROP) (gal/min)
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">Calcular perdida de presion en la broca</h1>
+            <li class="Calculo__items">
+              Densidad (lb/gal)
+              <input
+                type="number"
+                id="Densidad3"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Tasa de penetracion (ROP) (gal/min)
 
-            <input type="number" id="ROP" step="any" min="0" class="input" />
-          </li>
-          <li class="Calculo__items">
-            Area total de las boquillas.
+              <input type="number" id="ROP" step="any" min="0" class="input" />
+            </li>
+            <li class="Calculo__items">
+              Area total de las boquillas.
+              <input
+                type="number"
+                id="AreaBoquillas"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado3">
+              La perdida de presion en la broca es:
+            </li>
             <input
-              type="number"
-              id="AreaBoquillas"
-              step="any"
-              min="0"
-              class="input" />
-          </li>
-          <li class="Calculo__items" id="resultado3">
-            La perdida de presion en la broca es:
-          </li>
-          <input
-            class="boton"
-            type="button"
-            value="calcular"
-            onclick="perdidaDePresionBroca()" />
-        </ul>
+              class="boton"
+              type="button"
+              value="calcular"
+              onclick="perdidaDePresionBroca()" />
+          </ul>
+        </div>
+        <div>
+          <img class="imagen" src="/img/brocas.png" alt="formula" />
+        </div>
       </section>
     </main>
   </body>
