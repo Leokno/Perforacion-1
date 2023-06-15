@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculos de presión</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="calculos.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="Calculo">
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">
+              Calcular perdida de presión en la tuberia de perforación en cada
+              intervalo.
+            </h1>
+            <li class="Calculo__items">
+              Velocidad (ft/min)
+              <input
+                type="number"
+                id="Velocidad"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Diámetro interno (DI) de la tubería (in)
+              <input
+                type="number"
+                id="IDTuberia"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Densidad (lb/gal)
+              <input
+                type="number"
+                id="Densidad"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Longitud (ft)
+              <input
+                type="number"
+                id="Longitud"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Factor de friccion
+              <input
+                type="number"
+                id="FactorDeFriccion"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado">
+              La perdida de presion es:
+            </li>
+            <input
+              class="boton"
+              type="button"
+              value="calcular"
+              onclick="CalcularPerdidaDePresion()" />
+          </ul>
+        </div>
+      </section>
+      <section class="Calculo">
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">Perdidas de presion anular</h1>
+            <li class="Calculo__items">
+              Diametro exterior de la tuberia de perforación (in)
+              <input
+                type="number"
+                id="DiametroexternoTuberiaPerforacion"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+
+            <li class="Calculo__items">
+              Diametro interior del pozo o tuberia de revestimiento (in)
+              <input
+                type="number"
+                id="DiametroInternoPoso"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Velocidad en cada intervalo anular(ft/s)
+              <input
+                type="number"
+                id="VelocidadIntervalo"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Factor de friccion anular
+              <input
+                type="number"
+                id="FactorDeFriccionAnular"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Densidad del fluido(lb/gal)
+              <input
+                type="number"
+                id="DensidadDelFluido2"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              longitud de cada intervalo anular
+              <input
+                type="number"
+                id="LongitudIntervalo"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado2">
+              La perdida de presion anular es:
+            </li>
+            <input
+              class="boton"
+              type="button"
+              value="calcular"
+              onclick="perdidaDePresionAnular()" />
+          </ul>
+        </div>
+
+        <div>
+          <img
+            src="/img/Captura de pantalla 2023-06-12 151424.png"
+            alt="formula" />
+        </div>
+      </section>
+      <section class="Calculo">
+        <ul class="container">
+          <h1 class="Titulo">Calcular perdida de presion en la broca</h1>
+          <li class="Calculo__items">
+            Densidad (lb/gal)
+            <input
+              type="number"
+              id="Densidad3"
+              step="any"
+              min="0"
+              class="input" />
+          </li>
+          <li class="Calculo__items">
+            Tasa de penetracion (ROP) (gal/min)
+
+            <input type="number" id="ROP" step="any" min="0" class="input" />
+          </li>
+          <li class="Calculo__items">
+            Area total de las boquillas.
+            <input
+              type="number"
+              id="AreaBoquillas"
+              step="any"
+              min="0"
+              class="input" />
+          </li>
+          <li class="Calculo__items" id="resultado3">
+            La perdida de presion en la broca es:
+          </li>
+          <input
+            class="boton"
+            type="button"
+            value="calcular"
+            onclick="perdidaDePresionBroca()" />
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
