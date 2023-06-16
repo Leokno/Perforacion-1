@@ -9,14 +9,80 @@
     <link rel="stylesheet" href="calculos.css" />
   </head>
   <body>
-    <header></header>
     <main>
       <section class="Calculo">
         <div>
           <ul class="container">
             <h1 class="Titulo">
+              Calcular numero de reynolds y factor de friccion
+            </h1>
+            <li class="Calculo__items">
+              Densidad
+              <input
+                type="number"
+                id="dendidadre"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              velocidad
+              <input
+                type="number"
+                id="velocidadre"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Diametro
+              <input
+                type="number"
+                id="diametro"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              viscocidad
+              <input
+                type="number"
+                id="viscocidad"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado0"></li>
+
+            <input
+              class="boton"
+              type="button"
+              id="resultado12"
+              value="Calcular numero de reynolds "
+              onclick="FactorDeFriccion()" />
+            <li class="Calculo__items" id="resultado01"></li>
+            <input
+              class="boton"
+              type="button"
+              value="Calcular factor de friccion"
+              onclick="FactorDeFriccion2()" />
+
+            <p class="parrafo">
+              si el numero de reynolds es mayor a 2100 el flujo es turbulento ,
+              usar formula 1 y 2
+            </p>
+          </ul>
+        </div>
+        <div>
+          <img class="imagen" src="/img/formula 1.png" alt="formula" />
+        </div>
+      </section>
+      <section class="Calculo">
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">
               Calcular perdida de presión en la tuberia de perforación en cada
-              intervalo.
+              intervalo. (formula 1)
             </h1>
             <li class="Calculo__items">
               Velocidad (ft/min)
@@ -80,7 +146,7 @@
       <section class="Calculo">
         <div>
           <ul class="container">
-            <h1 class="Titulo">Perdidas de presion anular</h1>
+            <h1 class="Titulo">Perdidas de presion en anular (formula 2)</h1>
             <li class="Calculo__items">
               Diametro exterior de la tuberia de perforación (in)
               <input
@@ -157,7 +223,9 @@
       <section class="Calculo">
         <div>
           <ul class="container">
-            <h1 class="Titulo">Calcular perdida de presion en la broca</h1>
+            <h1 class="Titulo">
+              Calcular perdida de presion en la broca (formula 3)
+            </h1>
             <li class="Calculo__items">
               Densidad (lb/gal)
               <input
@@ -193,6 +261,98 @@
         </div>
         <div>
           <img class="imagen" src="/img/brocas.png" alt="formula" />
+        </div>
+      </section>
+
+      <section class="Calculo">
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">
+              Calculo de perdida de presion en anular (Formula 4)
+            </h1>
+            <li class="Calculo__items">
+              viscocidad
+              <input
+                type="number"
+                id="viscosidad1"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              velocidad
+              <input
+                type="number"
+                id="velocidad1"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Diametro 1
+              <input type="number" id="D1" step="any" min="0" class="input" />
+            </li>
+            <li class="Calculo__items">
+              Diametro 2
+              <input type="number" id="D2" step="any" min="0" class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado4">
+              La perdida de presion en la broca es:
+            </li>
+            <input
+              class="boton"
+              type="button"
+              value="calcular"
+              onclick="perdidaDePresionanularFL()" />
+          </ul>
+        </div>
+        <div>
+          <img class="imagen" src="/img/tuberiasfl.png" alt="formula" />
+        </div>
+      </section>
+      <section class="Calculo">
+        <div>
+          <ul class="container">
+            <h1 class="Titulo">
+              Calculo de perdida de presion en anular (Formula 5)
+            </h1>
+            <li class="Calculo__items">
+              viscocidad
+              <input
+                type="number"
+                id="viscocidad6"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              velocidad
+              <input
+                type="number"
+                id="valocidad6"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items">
+              Diametro
+              <input
+                type="number"
+                id="diametro7"
+                step="any"
+                min="0"
+                class="input" />
+            </li>
+            <li class="Calculo__items" id="resultado5"></li>
+            <input
+              class="boton"
+              type="button"
+              value="calcular"
+              onclick="PerdidadDepresionFLT()" />
+          </ul>
+        </div>
+        <div>
+          <img class="imagen" src="/img/anular.png" alt="formula" />
         </div>
       </section>
     </main>
