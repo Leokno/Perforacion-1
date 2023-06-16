@@ -71,6 +71,7 @@ body{
     width: 100%;
 }
 .parrafo{
+    justify-content: center;
     text-align: center;
 }
 
